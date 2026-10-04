@@ -38,39 +38,42 @@ import {
 } from "lucide-react"
 import { usePersistent } from "@/lib/use-persistent"
 import { cn } from "@/lib/utils"
-import { AsciiTool } from "@/components/tools/ascii-tool"
-import { BauhausTool } from "@/components/tools/bauhaus-tool"
-import { DitherTool } from "@/components/tools/dither-tool"
-import { FaviconTool } from "@/components/tools/favicon-tool"
-import { FlowTool } from "@/components/tools/flow-tool"
-import { LowPolyTool } from "@/components/tools/lowpoly-tool"
-import { MockupTool } from "@/components/tools/mockup-tool"
-import { OgTool } from "@/components/tools/og-tool"
-import { PixelTool } from "@/components/tools/pixel-tool"
-import { SynthTool } from "@/components/tools/synth-tool"
-import { AnimationTool } from "@/components/tools/animation-tool"
-import { ArrowTool } from "@/components/tools/arrow-tool"
-import { AuroraTool } from "@/components/tools/aurora-tool"
-import { EffectsTool } from "@/components/tools/effects-tool"
-import { LavaTool } from "@/components/tools/lava-tool"
-import { ParticlesTool } from "@/components/tools/particles-tool"
-import { BlobTool } from "@/components/tools/blob-tool"
-import { BurstTool } from "@/components/tools/burst-tool"
-import { ClipPathTool } from "@/components/tools/clip-path-tool"
-import { DividerTool } from "@/components/tools/divider-tool"
-import { GlassTool } from "@/components/tools/glass-tool"
-import { ImageTool } from "@/components/tools/image-tool"
-import { LineTool } from "@/components/tools/line-tool"
-import { MaskTool } from "@/components/tools/mask-tool"
-import { MeshTool } from "@/components/tools/mesh-tool"
-import { PatternTool } from "@/components/tools/pattern-tool"
-import { ScatterTool } from "@/components/tools/scatter-tool"
-import { ScrollVideoTool } from "@/components/tools/scroll-video-tool"
-import { ShadowTool } from "@/components/tools/shadow-tool"
-import { TopoTool } from "@/components/tools/topo-tool"
-import { UnitsTool } from "@/components/tools/units-tool"
-import { WaveTool } from "@/components/tools/wave-tool"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+
+const AnimationTool = lazy(() => import("@/components/tools/animation-tool").then((m) => ({ default: m.AnimationTool })))
+const ArrowTool = lazy(() => import("@/components/tools/arrow-tool").then((m) => ({ default: m.ArrowTool })))
+const AsciiTool = lazy(() => import("@/components/tools/ascii-tool").then((m) => ({ default: m.AsciiTool })))
+const AuroraTool = lazy(() => import("@/components/tools/aurora-tool").then((m) => ({ default: m.AuroraTool })))
+const BauhausTool = lazy(() => import("@/components/tools/bauhaus-tool").then((m) => ({ default: m.BauhausTool })))
+const BlobTool = lazy(() => import("@/components/tools/blob-tool").then((m) => ({ default: m.BlobTool })))
+const BurstTool = lazy(() => import("@/components/tools/burst-tool").then((m) => ({ default: m.BurstTool })))
+const ClipPathTool = lazy(() => import("@/components/tools/clip-path-tool").then((m) => ({ default: m.ClipPathTool })))
+const DitherTool = lazy(() => import("@/components/tools/dither-tool").then((m) => ({ default: m.DitherTool })))
+const DividerTool = lazy(() => import("@/components/tools/divider-tool").then((m) => ({ default: m.DividerTool })))
+const EffectsTool = lazy(() => import("@/components/tools/effects-tool").then((m) => ({ default: m.EffectsTool })))
+const FaviconTool = lazy(() => import("@/components/tools/favicon-tool").then((m) => ({ default: m.FaviconTool })))
+const FlowTool = lazy(() => import("@/components/tools/flow-tool").then((m) => ({ default: m.FlowTool })))
+const GlassTool = lazy(() => import("@/components/tools/glass-tool").then((m) => ({ default: m.GlassTool })))
+const ImageTool = lazy(() => import("@/components/tools/image-tool").then((m) => ({ default: m.ImageTool })))
+const LavaTool = lazy(() => import("@/components/tools/lava-tool").then((m) => ({ default: m.LavaTool })))
+const LineTool = lazy(() => import("@/components/tools/line-tool").then((m) => ({ default: m.LineTool })))
+const LowPolyTool = lazy(() => import("@/components/tools/lowpoly-tool").then((m) => ({ default: m.LowPolyTool })))
+const MaskTool = lazy(() => import("@/components/tools/mask-tool").then((m) => ({ default: m.MaskTool })))
+const MeshTool = lazy(() => import("@/components/tools/mesh-tool").then((m) => ({ default: m.MeshTool })))
+const MockupTool = lazy(() => import("@/components/tools/mockup-tool").then((m) => ({ default: m.MockupTool })))
+const OgTool = lazy(() => import("@/components/tools/og-tool").then((m) => ({ default: m.OgTool })))
+const ParticlesTool = lazy(() => import("@/components/tools/particles-tool").then((m) => ({ default: m.ParticlesTool })))
+const PatternTool = lazy(() => import("@/components/tools/pattern-tool").then((m) => ({ default: m.PatternTool })))
+const PixelTool = lazy(() => import("@/components/tools/pixel-tool").then((m) => ({ default: m.PixelTool })))
+const ScatterTool = lazy(() => import("@/components/tools/scatter-tool").then((m) => ({ default: m.ScatterTool })))
+const ScrollVideoTool = lazy(() => import("@/components/tools/scroll-video-tool").then((m) => ({ default: m.ScrollVideoTool })))
+const ShadowTool = lazy(() => import("@/components/tools/shadow-tool").then((m) => ({ default: m.ShadowTool })))
+const SynthTool = lazy(() => import("@/components/tools/synth-tool").then((m) => ({ default: m.SynthTool })))
+const TopoTool = lazy(() => import("@/components/tools/topo-tool").then((m) => ({ default: m.TopoTool })))
+const UnitsTool = lazy(() => import("@/components/tools/units-tool").then((m) => ({ default: m.UnitsTool })))
+const WaveTool = lazy(() => import("@/components/tools/wave-tool").then((m) => ({ default: m.WaveTool })))
+
+const ThreeTool = lazy(() => import("@/components/tools/three-tool").then((m) => ({ default: m.ThreeTool })))
 
 interface Tool {
   id: string
@@ -78,8 +81,6 @@ interface Tool {
   icon: ComponentType<{ className?: string }>
   view: ComponentType
 }
-
-const ThreeTool = lazy(() => import("@/components/tools/three-tool").then((m) => ({ default: m.ThreeTool })))
 
 const GROUPS: { title: string; tools: Tool[] }[] = [
   {

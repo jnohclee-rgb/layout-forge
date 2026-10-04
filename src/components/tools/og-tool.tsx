@@ -214,13 +214,15 @@ export function OgTool() {
     }
   }
 
+  const esc = (v: string) => v.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")
+
   const outputs = [
     {
       id: "meta",
       label: "Meta tags",
       lang: "html",
       file: "head.html",
-      code: `<meta property="og:title" content="${s.title}" />\n<meta property="og:description" content="${s.subtitle}" />\n<meta property="og:image" content="https://${s.site}/og-image.png" />\n<meta property="og:image:width" content="1200" />\n<meta property="og:image:height" content="630" />\n<meta property="og:type" content="article" />\n<meta name="twitter:card" content="summary_large_image" />\n<meta name="twitter:title" content="${s.title}" />\n<meta name="twitter:description" content="${s.subtitle}" />\n<meta name="twitter:image" content="https://${s.site}/og-image.png" />\n`,
+      code: `<meta property="og:title" content="${esc(s.title)}" />\n<meta property="og:description" content="${esc(s.subtitle)}" />\n<meta property="og:image" content="https://${s.site}/og-image.png" />\n<meta property="og:image:width" content="1200" />\n<meta property="og:image:height" content="630" />\n<meta property="og:type" content="article" />\n<meta name="twitter:card" content="summary_large_image" />\n<meta name="twitter:title" content="${esc(s.title)}" />\n<meta name="twitter:description" content="${esc(s.subtitle)}" />\n<meta name="twitter:image" content="https://${s.site}/og-image.png" />\n`,
     },
     {
       id: "next",

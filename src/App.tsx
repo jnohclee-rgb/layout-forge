@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { Suspense, lazy, useState } from "react"
 import { useTheme } from "@/lib/theme"
 import { LayoutGridIcon, MoonIcon, PaletteIcon, RowsIcon, SparklesIcon, SunIcon } from "lucide-react"
 import { rootNode } from "@/layout/defaults"
@@ -6,9 +6,14 @@ import { useLayoutDoc } from "@/layout/store"
 import { IconButton } from "@/components/fields"
 import { SocialLinks } from "@/components/social-links"
 import { LayoutEditor } from "@/components/layout/layout-editor"
-import { PaletteTool } from "@/components/palette/palette-tool"
-import { ToolsView } from "@/components/tools/tools-view"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
+const PaletteTool = lazy(() => import("@/components/palette/palette-tool").then((m) => ({ default: m.PaletteTool })))
+const ToolsView = lazy(() => import("@/components/tools/tools-view").then((m) => ({ default: m.ToolsView })))
+
+function Loading() {
+  return <div className="flex h-full items-center justify-center text-sm text-muted-foreground">Loading…</div>
+}
 
 function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
@@ -79,10 +84,14 @@ export default function App() {
         <LayoutEditor doc={flexDoc} kind="flex" />
       </TabsContent>
       <TabsContent value="palette" className="min-h-0">
-        <PaletteTool />
+        <Suspense fallback={<Loading />}>
+          <PaletteTool />
+        </Suspense>
       </TabsContent>
       <TabsContent value="tools" className="min-h-0">
-        <ToolsView />
+        <Suspense fallback={<Loading />}>
+          <ToolsView />
+        </Suspense>
       </TabsContent>
     </Tabs>
   )

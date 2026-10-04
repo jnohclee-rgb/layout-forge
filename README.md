@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Build with `npm run build` — the output in `dist/` is static and works on any host. Checks: `npm run typecheck`, `npm run lint`.
+Build with `npm run build` — the output in `dist/` is static and works on any host. Checks: `npm run typecheck`, `npm run lint`, `npm test`.
 
 ## Tech stack
 

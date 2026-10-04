@@ -7,7 +7,8 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "test": "vitest run"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -34,7 +35,8 @@
     "oxlint": "^1.81.0",
     "shadcn": "^4.21.1",
     "typescript": "~6.0.2",
-    "vite": "^8.3.0"
+    "vite": "^8.3.0",
+    "vitest": "^5.0.3"
   },
   "description": "Visual generators for design and front-end work: Grid, Flex, palettes, backgrounds, 3D, mockups",
   "license": "MIT",
