@@ -20,14 +20,12 @@
 
 ## Features
 
-| | |
-|---|---|
-| **Layout** | Drag & drop Grid, grid-area, subgrids, auto-fill / auto-fit, Flex, breakpoints, CSS import, export to CSS / Tailwind / JSX |
-| **Color** | Palettes from a single color, CSS tokens, palette from an image |
-| **Decor** | clip-path, blob, waves, patterns, shadows, glassmorphism, dividers, arrows, sunburst, SVG lines, CSS mask |
-| **Generative graphics** | Animated mesh gradients, aurora, lava, low-poly and Voronoi, flow field, contour lines, Bauhaus, dither, ASCII, pixel art |
-| **Animation and 3D** | CSS animations and effects, particles, three.js scenes, scroll video |
-| **Extras** | Unit converter, device mockup editor, OG images, favicon generator |
+- **Layout:** drag & drop Grid, grid-area, subgrids, auto-fill / auto-fit, Flex, breakpoints, CSS import, export to CSS / Tailwind / JSX
+- **Color:** palettes from a single color, CSS tokens, palette from an image
+- **Decor:** clip-path, blob, waves, patterns, shadows, glassmorphism, dividers, arrows, sunburst, SVG lines, CSS mask
+- **Generative graphics:** animated mesh gradients, aurora, lava, low-poly and Voronoi, flow field, contour lines, Bauhaus, dither, ASCII, pixel art
+- **Animation and 3D:** CSS animations and effects, particles, three.js scenes, scroll video
+- **Extras:** unit converter, device mockup editor, OG images, favicon generator
 
 Everything runs locally: your files and images never leave the browser.
 
