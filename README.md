@@ -16,7 +16,7 @@
 
 </div>
 
-<p align="center"><img src="docs/screenshots/generators.png" alt="Mesh gradient generator" width="900" /></p>
+<p align="center"><img src="docs/demo.gif" alt="Layout Forge demo" width="900" /></p>
 
 <p align="center">
   <img src="docs/screenshots/editor.png" alt="Grid editor" width="440" />
@@ -35,6 +35,21 @@
 | **Extras** | Unit converter, device mockup editor, OG images, favicon generator |
 
 Everything runs locally: your files and images never leave the browser.
+
+## Tools
+
+Open any tool directly in the [live demo](https://vumox.github.io/layout-forge/):
+
+| Group | Tools |
+|---|---|
+| **Layout** | [Grid](https://vumox.github.io/layout-forge/#grid) · [Flex](https://vumox.github.io/layout-forge/#flex) · [Palette](https://vumox.github.io/layout-forge/#palette) |
+| **Backgrounds** | [Mesh gradient](https://vumox.github.io/layout-forge/#tools/mesh) · [Patterns](https://vumox.github.io/layout-forge/#tools/pattern) · [Shape backgrounds](https://vumox.github.io/layout-forge/#tools/scatter) · [Contours](https://vumox.github.io/layout-forge/#tools/topo) · [Rays and spirals](https://vumox.github.io/layout-forge/#tools/burst) · [Aurora](https://vumox.github.io/layout-forge/#tools/aurora) · [Lava lamp](https://vumox.github.io/layout-forge/#tools/lava) · [Photo as background](https://vumox.github.io/layout-forge/#tools/image) |
+| **Generative** | [Bauhaus grids](https://vumox.github.io/layout-forge/#tools/bauhaus) · [Low-poly / Voronoi](https://vumox.github.io/layout-forge/#tools/lowpoly) · [Flow field](https://vumox.github.io/layout-forge/#tools/flow) · [Dither and halftone](https://vumox.github.io/layout-forge/#tools/dither) · [ASCII art](https://vumox.github.io/layout-forge/#tools/ascii) · [Pixel-art](https://vumox.github.io/layout-forge/#tools/pixel) · [Synthwave](https://vumox.github.io/layout-forge/#tools/synth) |
+| **Shapes and decor** | [Dividers](https://vumox.github.io/layout-forge/#tools/divider) · [Waves](https://vumox.github.io/layout-forge/#tools/wave) · [Blob](https://vumox.github.io/layout-forge/#tools/blob) · [clip-path](https://vumox.github.io/layout-forge/#tools/clip) · [Lines and squiggles](https://vumox.github.io/layout-forge/#tools/line) · [Arrows](https://vumox.github.io/layout-forge/#tools/arrow) |
+| **Effects** | [Glassmorphism](https://vumox.github.io/layout-forge/#tools/glass) · [CSS mask](https://vumox.github.io/layout-forge/#tools/mask) · [CSS effects](https://vumox.github.io/layout-forge/#tools/fx) · [Shadows](https://vumox.github.io/layout-forge/#tools/shadow) |
+| **3D and motion** | [3D scenes](https://vumox.github.io/layout-forge/#tools/three) · [CSS animations](https://vumox.github.io/layout-forge/#tools/animation) · [Particles](https://vumox.github.io/layout-forge/#tools/particles) · [Scroll video](https://vumox.github.io/layout-forge/#tools/scroll) |
+| **Media and assets** | [Mockups](https://vumox.github.io/layout-forge/#tools/mockup) · [OG images](https://vumox.github.io/layout-forge/#tools/og) · [Favicon](https://vumox.github.io/layout-forge/#tools/favicon) |
+| **Typography** | [Font units](https://vumox.github.io/layout-forge/#tools/units) |
 
 ## Quick start
 

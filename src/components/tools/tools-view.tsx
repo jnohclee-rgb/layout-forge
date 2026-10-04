@@ -1,4 +1,4 @@
-import { Suspense, lazy, type ComponentType } from "react"
+import { Suspense, lazy, useEffect, type ComponentType } from "react"
 import {
   ArrowUpRightIcon,
   AppWindowIcon,
@@ -36,6 +36,7 @@ import {
   SunIcon,
   WavesIcon,
 } from "lucide-react"
+import { parseHash, writeHash } from "@/lib/route"
 import { usePersistent } from "@/lib/use-persistent"
 import { cn } from "@/lib/utils"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
@@ -156,6 +157,21 @@ const ALL = GROUPS.flatMap((g) => g.tools)
 export function ToolsView() {
   const [s, set] = usePersistent("lf-tools", { tool: "mesh", collapsed: false })
   const tool = ALL.find((t) => t.id === s.tool) ?? ALL[0]
+
+  useEffect(() => {
+    const apply = () => {
+      const id = parseHash(location.hash).tool
+      if (id && ALL.some((t) => t.id === id)) set({ tool: id })
+    }
+    apply()
+    addEventListener("hashchange", apply)
+    return () => removeEventListener("hashchange", apply)
+  }, [set])
+
+  useEffect(() => {
+    writeHash("tools", tool.id)
+  }, [tool.id])
+
   const View = tool.view
   return (
     <div className="flex h-full min-h-0 flex-col md:flex-row">

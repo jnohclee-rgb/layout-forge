@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 export function usePersistent<T extends object>(key: string, initial: T) {
   const [value, setValue] = useState<T>(() => {
@@ -19,6 +19,6 @@ export function usePersistent<T extends object>(key: string, initial: T) {
     }, 300)
     return () => clearTimeout(t)
   }, [key, value])
-  const patch = (p: Partial<T>) => setValue((v) => ({ ...v, ...p }))
+  const patch = useCallback((p: Partial<T>) => setValue((v) => ({ ...v, ...p })), [])
   return [value, patch, setValue] as const
 }

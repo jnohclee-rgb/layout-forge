@@ -1,5 +1,6 @@
-import { Suspense, lazy, useState } from "react"
+import { Suspense, lazy, useEffect, useState } from "react"
 import { useTheme } from "@/lib/theme"
+import { parseHash, writeHash } from "@/lib/route"
 import { LayoutGridIcon, MoonIcon, PaletteIcon, RowsIcon, SparklesIcon, SunIcon } from "lucide-react"
 import { rootNode } from "@/layout/defaults"
 import { useLayoutDoc } from "@/layout/store"
@@ -27,17 +28,29 @@ function ThemeToggle() {
 
 export default function App() {
   const [tab, setTab] = useState(() => {
+    const fromHash = parseHash(location.hash).tab
+    if (fromHash) return fromHash
     try {
-      return localStorage.getItem("lf-tab") ?? "grid"
+      return localStorage.getItem("lf-tab") ?? "tools"
     } catch {
-      return "grid"
+      return "tools"
     }
   })
+
+  useEffect(() => {
+    const onHash = () => {
+      const t = parseHash(location.hash).tab
+      if (t) setTab(t)
+    }
+    addEventListener("hashchange", onHash)
+    return () => removeEventListener("hashchange", onHash)
+  }, [])
   const gridDoc = useLayoutDoc("lf-grid", () => rootNode("grid"))
   const flexDoc = useLayoutDoc("lf-flex", () => rootNode("flex"))
 
   const changeTab = (v: string) => {
     setTab(v)
+    writeHash(v)
     try {
       localStorage.setItem("lf-tab", v)
     } catch {
