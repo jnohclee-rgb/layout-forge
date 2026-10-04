@@ -18,11 +18,6 @@
 
 <p align="center"><img src="docs/demo.gif" alt="Layout Forge demo" width="900" /></p>
 
-<p align="center">
-  <img src="docs/screenshots/editor.png" alt="Grid editor" width="440" />
-  <img src="docs/screenshots/palette.png" alt="Palette generator" width="440" />
-</p>
-
 ## Features
 
 | | |
